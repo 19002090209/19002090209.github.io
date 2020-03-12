@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function reduce(array,combine,start){
+        var current=start;
+        for(var element of array){
+            current=combine(current,element);
+        }shu
+        return current;
+    }
+    var shu=[
+    {name:"语",credit:98},
+    {name:"数",credit:99},
+    {name:"英",credit:97},
+    {name:"科",credit:96},
+
+    ]
+    console.log(
+        reduce(
+            shu,
+            function(a,b){return a+b.credit;}
+            ,0));
+        
+    
+</script>
+<body>
+    
+</body>
+</html>
