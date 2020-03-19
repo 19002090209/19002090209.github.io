@@ -1,34 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<script>
-    function reduce(array,combine,start){
-        var current=start;
-        for(var element of array){
-            current=combine(current,element);
-        }shu
-        return current;
-    }
-    var shu=[
-    {name:"语",credit:98},
-    {name:"数",credit:99},
-    {name:"英",credit:97},
-    {name:"科",credit:96},
+<html>
+    <body>
+        <script src="jsjs.js"></script>
+        <script src="underscore.js"></script>
+        <script>
+var reduce=3;
+var data=[
+    {name:'计算机安装与维护',credit:2}
+    ,{name:'静态网页制作',credit:2}
+    ,{name:'计算机编程基础',credit:4}
+    ,{name:'大学英语',credit:2}
+    ,{name:'软件技术导论',credit:2}
+];
+console.log(my.max(data));
+console.log("最大值如下")
+console.log(_.max(data,function(it){return it.credit;}));
+console.log("最小值如下")
+console.log(_.min(data,function(it){return it.credit;}));
 
-    ]
-    console.log(
-        reduce(
-            shu,
-            function(a,b){return a+b.credit;}
-            ,0));
-        
-    
-</script>
-<body>
-    
-</body>
+
+        </script>
+
+    </body>
 </html>
